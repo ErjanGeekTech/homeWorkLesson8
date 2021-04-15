@@ -10,7 +10,7 @@ public class Berserk extends Hero{
     @Override
     public void appleSuperAbility(Boss boss, Hero[] heroes) {
         for (int i = 0; i < heroes.length; i++) {
-            if(heroes[i] == this && heroes[i].getHealth() >0){
+            if(heroes[i].getHealth() >0){
                 boss.setHealth(boss.getHealth() - (heroes[i].getDamage() + boss.getDamage() / 2));
                 System.out.println("Berserk took "+(heroes[i].getDamage() + boss.getDamage() / 2) +" from the boss");
                 break;
